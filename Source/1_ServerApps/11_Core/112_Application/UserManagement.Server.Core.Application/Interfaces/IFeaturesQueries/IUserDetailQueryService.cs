@@ -5,13 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using UserManagement.Shared.Models.ServicesDTOs._Shared;
 using UserManagement.Shared.Models.ServicesDTOs.GetUserDetailsList;
-using UserManagement.Shared.Models.ServicesDTOs.GetUserList;
 
-namespace UserManagement.Server.Core.Application.Interfaces.IServices
+namespace UserManagement.Server.Core.Application.Interfaces.IFeaturesQueries
 {
-	public interface IUserService
+	public interface IUserDetailQueryService
 	{
-		Task<ResponsePagedList<GetUserList_Response>> GetUserList(int pageNumber, short pageSize);
 		Task<ResponsePagedList<GetUserDetailsList_Response>> GetUserDetailsList(int pageNumber, short pageSize);
 	}
 }

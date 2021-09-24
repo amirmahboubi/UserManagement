@@ -18,6 +18,7 @@ namespace UserManagement.Server.Core.Application
         {
             //IFeaturesQueries
             services.AddScoped<IUserQueryService, UserQueryService>();
+            services.AddScoped<IUserDetailQueryService, UserDetailQueryService>();
 
             //IServices
             services.AddScoped<IUserService, UserService>();

@@ -63,6 +63,16 @@ namespace UserManagement.Server.Core.Domain.SeedData
 					LastName = "Minaee",
 					Mobile = "+989121112233"
 				},
+				new User()
+				{
+					UserId = 6,
+					UserName = "s.saravi",
+					Password = "sara*963",
+					IsActive = true,
+					FirstName = "Sara",
+					LastName = "Saravi",
+					Mobile = "+989121114433"
+				}
 			};
 		}
 	}

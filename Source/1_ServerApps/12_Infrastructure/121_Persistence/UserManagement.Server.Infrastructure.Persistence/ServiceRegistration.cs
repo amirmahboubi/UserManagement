@@ -21,6 +21,7 @@ namespace UserManagement.Server.Infrastructure.Persistence
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
             services.AddTransient<IUserRepositoryAsync, UserRepositoryAsync>();
+            services.AddTransient<IUserDetailRepositoryAsync, UserDetailRepositoryAsync>();
             #endregion
         }
     }

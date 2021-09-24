@@ -29,20 +29,19 @@ namespace UserManagement.Server.Core.Application.Features.Queries
 				var users = await _userRepositoryAsync.GetPagedReponseAsync(pageNumber, pageSize);
 				IEnumerable<GetUserList_Response> userList = users.Select(u => new GetUserList_Response()
 				{
-					FirstName = u.FirstName,
+					UserId = u.UserId,
 					IsActive = u.IsActive,
 					LastName = u.LastName,
-					Mobile = u.Mobile,
-					UserId = u.UserId,
-					UserName = u.UserName
+					UserName = u.UserName,
+					FirstName = u.FirstName,
 				});
 				response = new ResponsePagedList<GetUserList_Response>()
 				{
 					ContentData = new PagedList<GetUserList_Response>()
 					{
-						ResultList = userList.ToList(),
-						PageNumber = pageNumber,
 						PageSize = pageSize,
+						PageNumber = pageNumber,
+						ResultList = userList.ToList(),
 						TotalCount = await _userRepositoryAsync.GetTotalCountAsync()
 					},
 					Header = ResponseHeaderHelperMethods.SuccessResponse()
