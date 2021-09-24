@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Commands\Create\" />
+    <Folder Include="Features\Commands\Delete\" />
+    <Folder Include="Features\Commands\Update\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\2_Shared\UserManagement.Shared.Models\UserManagement.Shared.Models.csproj" />
+    <ProjectReference Include="..\..\111_Domain\UserManagement.Server.Core.Domain\UserManagement.Server.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
